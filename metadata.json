@@ -1,0 +1,6 @@
+{
+  "name": "MediQueue",
+  "description": "AI-powered hospital queue management platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

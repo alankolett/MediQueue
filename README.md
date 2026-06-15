@@ -1,11 +1,20 @@
-<div align="center">
+# MediQueue
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+**Real-Time Patient Flow Management**
 
-  <h1>Built with AI Studio</h2>
+MediQueue is a professional Healthcare SaaS application designed to manage clinical patient flow in real-time. Built for maximum efficiency, it features dual synchronized modules for the Receptionist workflow and Public Facing Waiting Room Displays, built over a robust Express + Socket.IO backend architecture.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Features
+- **Realtime Synchronization**: Instant updates across every screen via WebSockets.
+- **Receptionist Dashboard**: Issue tokens, call the next patient based on Triage logic (Emergency, Urgent, Routine), and track clinic pacing.
+- **Patient Dashboard & TV Display**: Real-time large-format displays for waiting rooms.
+- **AI Copilot**: Live analysis of wait times and emergency allocations, calculating metrics off real queue data.
+- **Voice Commands**: Lightweight voice assistant for hands-free token issuing or calling.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Architecture Highlights
+- Mutex-locked concurrency preventing race conditions when handling multiple queue updates.
+- Predictable estimated wait metrics dynamically scaling with average session time configuration.
+- Graceful empty states and dynamic Dark/Light theme generation.
 
-</div>
+## Development Docs
+See the `/docs` folder for detailed breakdowns of Socket.IO Events and Concurrency Handling intended for hackathon evaluations.
